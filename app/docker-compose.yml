@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  web:
+    build: .  # Usar el Dockerfile en el directorio actual
+    ports:
+      - "5001:5000"  # Exponer el puerto 5000 en el puerto 5001 del host
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
